@@ -6,6 +6,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -40,6 +41,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -75,6 +77,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -111,6 +114,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -146,6 +150,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -179,6 +184,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -212,6 +218,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -247,6 +254,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -280,6 +288,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -314,6 +323,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -349,6 +359,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -383,6 +394,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -415,6 +427,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -447,6 +460,7 @@ ffpa_try_building_advancedores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b001_pending }
@@ -1077,6 +1091,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1114,6 +1129,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1147,6 +1163,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1184,6 +1201,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1221,6 +1239,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1256,6 +1275,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1290,6 +1310,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1325,6 +1346,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1361,6 +1383,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1393,6 +1416,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1429,6 +1453,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1465,6 +1490,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1499,6 +1525,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -1532,6 +1559,7 @@ ffpa_try_building_aircraft_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b002_pending }
@@ -2172,6 +2200,7 @@ ffpa_try_building_airport_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_transport_urban
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b003_pending }
@@ -2203,6 +2232,7 @@ ffpa_try_building_airport_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_transport_urban
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b003_pending }
@@ -2235,6 +2265,7 @@ ffpa_try_building_airport_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_transport_urban
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b003_pending }
@@ -2266,6 +2297,7 @@ ffpa_try_building_airport_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_transport_urban
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b003_pending }
@@ -2296,6 +2328,7 @@ ffpa_try_building_airport_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_transport_urban
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b003_pending }
@@ -2326,6 +2359,7 @@ ffpa_try_building_airport_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_transport_urban
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b003_pending }
@@ -2526,6 +2560,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2561,6 +2596,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2597,6 +2633,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2632,6 +2669,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2667,6 +2705,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2703,6 +2742,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2738,6 +2778,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2772,6 +2813,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2807,6 +2849,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2841,6 +2884,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2875,6 +2919,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -2910,6 +2955,7 @@ ffpa_try_building_alloys_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b004_pending }
@@ -7666,6 +7712,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7701,6 +7748,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7737,6 +7785,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7773,6 +7822,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7809,6 +7859,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7843,6 +7894,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7877,6 +7929,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7912,6 +7965,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7947,6 +8001,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -7982,6 +8037,7 @@ ffpa_try_building_battery_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b010_pending }
@@ -8687,6 +8743,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8721,6 +8778,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8755,6 +8813,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8789,6 +8848,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8824,6 +8884,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8860,6 +8921,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8895,6 +8957,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8928,6 +8991,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8961,6 +9025,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -8996,6 +9061,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9029,6 +9095,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9062,6 +9129,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9095,6 +9163,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9129,6 +9198,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9164,6 +9234,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9198,6 +9269,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9230,6 +9302,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -9262,6 +9335,7 @@ ffpa_try_building_bauxite_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b011_pending }
@@ -12380,6 +12454,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12414,6 +12489,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12448,6 +12524,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12482,6 +12559,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12517,6 +12595,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12553,6 +12632,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12588,6 +12668,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12621,6 +12702,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12654,6 +12736,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12689,6 +12772,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12722,6 +12806,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12755,6 +12840,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12788,6 +12874,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12822,6 +12909,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12857,6 +12945,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12891,6 +12980,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12923,6 +13013,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -12955,6 +13046,7 @@ ffpa_try_building_commonores_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b015_pending }
@@ -13583,6 +13675,7 @@ ffpa_try_building_computer_assembly_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b016_pending }
@@ -13618,6 +13711,7 @@ ffpa_try_building_computer_assembly_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b016_pending }
@@ -13653,6 +13747,7 @@ ffpa_try_building_computer_assembly_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b016_pending }
@@ -13688,6 +13783,7 @@ ffpa_try_building_computer_assembly_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b016_pending }
@@ -13722,6 +13818,7 @@ ffpa_try_building_computer_assembly_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b016_pending }
@@ -13756,6 +13853,7 @@ ffpa_try_building_computer_assembly_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b016_pending }
@@ -14398,6 +14496,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14435,6 +14534,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14472,6 +14572,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14508,6 +14609,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14542,6 +14644,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14575,6 +14678,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14611,6 +14715,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14647,6 +14752,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14683,6 +14789,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14718,6 +14825,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14751,6 +14859,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -14783,6 +14892,7 @@ ffpa_try_building_consumer_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b018_pending }
@@ -15356,6 +15466,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15390,6 +15501,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15424,6 +15536,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15458,6 +15571,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15493,6 +15607,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15529,6 +15644,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15564,6 +15680,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15597,6 +15714,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15630,6 +15748,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15665,6 +15784,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15698,6 +15818,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15731,6 +15852,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15764,6 +15886,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15798,6 +15921,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15833,6 +15957,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15867,6 +15992,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15899,6 +16025,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -15931,6 +16058,7 @@ ffpa_try_building_copper_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b019_pending }
@@ -16957,6 +17085,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -16991,6 +17120,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17025,6 +17155,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17059,6 +17190,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17093,6 +17225,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17126,6 +17259,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17159,6 +17293,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17192,6 +17327,7 @@ ffpa_try_building_datacenter_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b021_pending }
@@ -17756,6 +17892,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17790,6 +17927,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17824,6 +17962,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17861,6 +18000,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17897,6 +18037,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17931,6 +18072,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17964,6 +18106,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -17997,6 +18140,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -18033,6 +18177,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -18068,6 +18213,7 @@ ffpa_try_building_ecommerce_logistics_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b023_pending }
@@ -19929,6 +20075,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -19962,6 +20109,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -19995,6 +20143,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20029,6 +20178,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20066,6 +20216,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20101,6 +20252,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20135,6 +20287,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20170,6 +20323,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20202,6 +20356,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20234,6 +20389,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20267,6 +20423,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20303,6 +20460,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20337,6 +20495,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -20370,6 +20529,7 @@ ffpa_try_building_electronics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b025_pending }
@@ -21009,6 +21169,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21043,6 +21204,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21076,6 +21238,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21110,6 +21273,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21143,6 +21307,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21177,6 +21342,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21212,6 +21378,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21243,6 +21410,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21274,6 +21442,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21305,6 +21474,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21336,6 +21506,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21371,6 +21542,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21403,6 +21575,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21438,6 +21611,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21470,6 +21644,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21503,6 +21678,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21537,6 +21713,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21567,6 +21744,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21597,6 +21775,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -21627,6 +21806,7 @@ ffpa_try_building_elgar_opera_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b026_pending }
@@ -25781,6 +25961,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -25813,6 +25994,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -25845,6 +26027,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -25876,6 +26059,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -25907,6 +26091,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -25943,6 +26128,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -25979,6 +26165,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -26009,6 +26196,7 @@ ffpa_try_building_geothermal_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b031_pending }
@@ -27630,6 +27818,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27667,6 +27856,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27703,6 +27893,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27736,6 +27927,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27773,6 +27965,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27809,6 +28002,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27841,6 +28035,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27878,6 +28073,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27914,6 +28110,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27945,6 +28142,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -27976,6 +28174,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28014,6 +28213,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28051,6 +28251,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28083,6 +28284,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28121,6 +28323,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28158,6 +28361,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28193,6 +28397,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28231,6 +28436,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28268,6 +28474,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28298,6 +28505,7 @@ ffpa_try_building_hydroelectric_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b035_pending }
@@ -28534,6 +28742,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28566,6 +28775,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28598,6 +28808,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28630,6 +28841,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28662,6 +28874,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28694,6 +28907,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28726,6 +28940,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28757,6 +28972,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28788,6 +29004,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28819,6 +29036,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28850,6 +29068,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -28881,6 +29100,7 @@ ffpa_try_building_hydroponic_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b036_pending }
@@ -29254,6 +29474,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29288,6 +29509,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29322,6 +29544,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29358,6 +29581,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29393,6 +29617,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29426,6 +29651,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29459,6 +29685,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29494,6 +29721,7 @@ ffpa_try_building_instrument_workshops_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b037_pending }
@@ -29876,6 +30104,7 @@ ffpa_try_building_interactive_media_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b038_pending }
@@ -29911,6 +30140,7 @@ ffpa_try_building_interactive_media_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b038_pending }
@@ -29946,6 +30176,7 @@ ffpa_try_building_interactive_media_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b038_pending }
@@ -29980,6 +30211,7 @@ ffpa_try_building_interactive_media_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b038_pending }
@@ -35236,6 +35468,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35272,6 +35505,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35306,6 +35540,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35340,6 +35575,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35376,6 +35612,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35410,6 +35647,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35446,6 +35684,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35483,6 +35722,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35518,6 +35758,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35553,6 +35794,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35590,6 +35832,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -35625,6 +35868,7 @@ ffpa_try_building_manzoni_publishing_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_culture
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b044_pending }
@@ -36010,6 +36254,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36043,6 +36288,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36079,6 +36325,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36115,6 +36362,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36151,6 +36399,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36185,6 +36434,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36217,6 +36467,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36254,6 +36505,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36291,6 +36543,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -36328,6 +36581,7 @@ ffpa_try_building_mendelejew_hydrogenation_plants_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b045_pending }
@@ -37091,6 +37345,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37124,6 +37379,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37159,6 +37415,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37193,6 +37450,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37228,6 +37486,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37263,6 +37522,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37296,6 +37556,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37330,6 +37591,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37363,6 +37625,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -37397,6 +37660,7 @@ ffpa_try_building_mendelejew_synthetic_rubber_factory_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b046_pending }
@@ -41022,6 +41286,7 @@ ffpa_try_building_natural_gas_rig_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b050_pending }
@@ -41058,6 +41323,7 @@ ffpa_try_building_natural_gas_rig_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b050_pending }
@@ -41093,6 +41359,7 @@ ffpa_try_building_natural_gas_rig_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b050_pending }
@@ -41130,6 +41397,7 @@ ffpa_try_building_natural_gas_rig_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b050_pending }
@@ -41167,6 +41435,7 @@ ffpa_try_building_natural_gas_rig_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b050_pending }
@@ -41203,6 +41472,7 @@ ffpa_try_building_natural_gas_rig_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b050_pending }
@@ -41580,6 +41850,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41616,6 +41887,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41652,6 +41924,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41686,6 +41959,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41721,6 +41995,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41756,6 +42031,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41791,6 +42067,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -41824,6 +42101,7 @@ ffpa_try_building_office_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_business_logistics
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b051_pending }
@@ -43999,6 +44277,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44033,6 +44312,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44069,6 +44349,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44106,6 +44387,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44140,6 +44422,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44173,6 +44456,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44206,6 +44490,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44241,6 +44526,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44277,6 +44563,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -44310,6 +44597,7 @@ ffpa_try_building_pharmaceuticals_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_chemicals_materials
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b055_pending }
@@ -46547,6 +46835,7 @@ ffpa_try_building_processors_foundry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b058_pending }
@@ -46583,6 +46872,7 @@ ffpa_try_building_processors_foundry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b058_pending }
@@ -46618,6 +46908,7 @@ ffpa_try_building_processors_foundry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b058_pending }
@@ -46653,6 +46944,7 @@ ffpa_try_building_processors_foundry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_electronics_hardware
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b058_pending }
@@ -48579,6 +48871,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48613,6 +48906,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48648,6 +48942,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48684,6 +48979,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48719,6 +49015,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48752,6 +49049,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48786,6 +49084,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -48821,6 +49120,7 @@ ffpa_try_building_rare_earths_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b060_pending }
@@ -49325,6 +49625,7 @@ ffpa_try_building_renewable_energy_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b061_pending }
@@ -49361,6 +49662,7 @@ ffpa_try_building_renewable_energy_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b061_pending }
@@ -49395,6 +49697,7 @@ ffpa_try_building_renewable_energy_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b061_pending }
@@ -49430,6 +49733,7 @@ ffpa_try_building_renewable_energy_power_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_energy
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b061_pending }
@@ -49599,6 +49903,7 @@ ffpa_try_building_research_center_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_research
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b062_pending }
@@ -49631,6 +49936,7 @@ ffpa_try_building_research_center_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_research
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b062_pending }
@@ -49664,6 +49970,7 @@ ffpa_try_building_research_center_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_research
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b062_pending }
@@ -49693,6 +50000,7 @@ ffpa_try_building_research_center_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_research
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b062_pending }
@@ -49722,6 +50030,7 @@ ffpa_try_building_research_center_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_research
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b062_pending }
@@ -50715,6 +51024,7 @@ ffpa_try_building_robotics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b064_pending }
@@ -50750,6 +51060,7 @@ ffpa_try_building_robotics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b064_pending }
@@ -50787,6 +51098,7 @@ ffpa_try_building_robotics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b064_pending }
@@ -50821,6 +51133,7 @@ ffpa_try_building_robotics_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_machinery_aerospace
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b064_pending }
@@ -53870,6 +54183,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -53906,6 +54220,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -53940,6 +54255,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -53975,6 +54291,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54009,6 +54326,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54042,6 +54360,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54075,6 +54394,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54110,6 +54430,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54143,6 +54464,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54177,6 +54499,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54210,6 +54533,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -54242,6 +54566,7 @@ ffpa_try_building_software_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b069_pending }
@@ -58231,6 +58556,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58265,6 +58591,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58300,6 +58627,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58334,6 +58662,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58366,6 +58695,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58401,6 +58731,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58437,6 +58768,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58470,6 +58802,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58504,6 +58837,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58537,6 +58871,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58569,6 +58904,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -58603,6 +58939,7 @@ ffpa_try_building_telecommunications_industry_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_digital
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b075_pending }
@@ -61715,6 +62052,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61749,6 +62087,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61783,6 +62122,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61817,6 +62157,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61852,6 +62193,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61888,6 +62230,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61923,6 +62266,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61956,6 +62300,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -61989,6 +62334,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62024,6 +62370,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62057,6 +62404,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62090,6 +62438,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62123,6 +62472,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62157,6 +62507,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62192,6 +62543,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62226,6 +62578,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62258,6 +62611,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -62290,6 +62644,7 @@ ffpa_try_building_uranium_mine_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_resources
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b080_pending }
@@ -65025,6 +65380,7 @@ ffpa_try_building_water_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b083_pending }
@@ -65060,6 +65416,7 @@ ffpa_try_building_water_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b083_pending }
@@ -65095,6 +65452,7 @@ ffpa_try_building_water_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b083_pending }
@@ -65130,6 +65488,7 @@ ffpa_try_building_water_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b083_pending }
@@ -65164,6 +65523,7 @@ ffpa_try_building_water_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b083_pending }
@@ -65198,6 +65558,7 @@ ffpa_try_building_water_plant_production_transition = {
 		limit = {
 			owner = {
 				has_variable = ffpa_auto_pm_agriculture_water
+				NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			}
 			state = {
 				NOT = { has_variable = ffpa_ap_b083_pending }
@@ -67470,6 +67831,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67488,6 +67850,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67506,6 +67869,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67524,6 +67888,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67542,6 +67907,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67560,6 +67926,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67578,6 +67945,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_resources
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -67596,6 +67964,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_agriculture_water
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 0
@@ -67614,6 +67983,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_agriculture_water
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 0
@@ -67632,6 +68002,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_chemicals_materials
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 2
@@ -67650,6 +68021,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_chemicals_materials
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 2
@@ -67668,6 +68040,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_chemicals_materials
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 2
@@ -67686,6 +68059,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_chemicals_materials
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 2
@@ -67704,6 +68078,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_chemicals_materials
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 2
@@ -67722,6 +68097,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_machinery_aerospace
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 1
@@ -67740,6 +68116,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_machinery_aerospace
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 1
@@ -67758,6 +68135,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_electronics_hardware
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 5
@@ -67776,6 +68154,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_electronics_hardware
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 5
@@ -67794,6 +68173,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_electronics_hardware
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 5
@@ -67812,6 +68192,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_electronics_hardware
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 5
@@ -67830,6 +68211,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_digital
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 4
@@ -67848,6 +68230,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_digital
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 4
@@ -67866,6 +68249,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_digital
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 4
@@ -67884,6 +68268,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_digital
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 4
@@ -67902,6 +68287,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_business_logistics
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_office }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 1
@@ -67920,6 +68306,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_business_logistics
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 1
@@ -67938,6 +68325,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_energy
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 0
@@ -67956,6 +68344,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_energy
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 0
@@ -67974,6 +68363,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_energy
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 0
@@ -67992,6 +68382,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_transport_urban
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_airport }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 4
@@ -68010,6 +68401,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_culture
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -68028,6 +68420,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_culture
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -68046,6 +68439,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_culture
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 3
@@ -68064,6 +68458,7 @@ ffpa_process_new_techres_buildings = {
 	if = {
 		limit = {
 			has_variable = ffpa_auto_pm_research
+			NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center }
 			OR = {
 				has_variable = zw_var_auto_pm_higher_frequency
 				month = 2

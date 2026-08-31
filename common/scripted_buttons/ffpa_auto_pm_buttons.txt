@@ -75,3 +75,357 @@ ffpa_auto_pm_research_button = {
 	effect = { ffpa_toggle_auto_pm_research = yes }
 }
 
+# Per-building selectors are opt-out controls. Their category button remains the
+# master switch, so old saves with no exclusion variables retain their behavior.
+
+# Mining and resources
+ffpa_auto_pm_building_advancedores_mine_button = {
+	name = "building_advancedores_mine"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_advancedores_mine } remove_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
+		else = { set_variable = ffpa_auto_pm_exclude_building_advancedores_mine }
+	}
+}
+
+ffpa_auto_pm_building_bauxite_mine_button = {
+	name = "building_bauxite_mine"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_bauxite_mine } remove_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
+		else = { set_variable = ffpa_auto_pm_exclude_building_bauxite_mine }
+	}
+}
+
+ffpa_auto_pm_building_commonores_mine_button = {
+	name = "building_commonores_mine"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_commonores_mine } remove_variable = ffpa_auto_pm_exclude_building_commonores_mine }
+		else = { set_variable = ffpa_auto_pm_exclude_building_commonores_mine }
+	}
+}
+
+ffpa_auto_pm_building_copper_mine_button = {
+	name = "building_copper_mine"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_copper_mine } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_copper_mine } remove_variable = ffpa_auto_pm_exclude_building_copper_mine }
+		else = { set_variable = ffpa_auto_pm_exclude_building_copper_mine }
+	}
+}
+
+ffpa_auto_pm_building_rare_earths_mine_button = {
+	name = "building_rare_earths_mine"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_rare_earths_mine } remove_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
+		else = { set_variable = ffpa_auto_pm_exclude_building_rare_earths_mine }
+	}
+}
+
+ffpa_auto_pm_building_uranium_mine_button = {
+	name = "building_uranium_mine"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_uranium_mine } remove_variable = ffpa_auto_pm_exclude_building_uranium_mine }
+		else = { set_variable = ffpa_auto_pm_exclude_building_uranium_mine }
+	}
+}
+
+ffpa_auto_pm_building_natural_gas_rig_button = {
+	name = "building_natural_gas_rig"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_natural_gas_rig } remove_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
+		else = { set_variable = ffpa_auto_pm_exclude_building_natural_gas_rig }
+	}
+}
+
+# Agriculture and water
+ffpa_auto_pm_building_hydroponic_button = {
+	name = "building_hydroponic"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroponic } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_hydroponic } remove_variable = ffpa_auto_pm_exclude_building_hydroponic }
+		else = { set_variable = ffpa_auto_pm_exclude_building_hydroponic }
+	}
+}
+
+ffpa_auto_pm_building_water_plant_button = {
+	name = "building_water_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_water_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_water_plant } remove_variable = ffpa_auto_pm_exclude_building_water_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_water_plant }
+	}
+}
+
+# Chemicals and materials
+ffpa_auto_pm_building_alloys_plant_button = {
+	name = "building_alloys_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_alloys_plant } remove_variable = ffpa_auto_pm_exclude_building_alloys_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_alloys_plant }
+	}
+}
+
+ffpa_auto_pm_building_battery_plant_button = {
+	name = "building_battery_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_battery_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_battery_plant } remove_variable = ffpa_auto_pm_exclude_building_battery_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_battery_plant }
+	}
+}
+
+ffpa_auto_pm_building_pharmaceuticals_industry_button = {
+	name = "building_pharmaceuticals_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry } remove_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_pharmaceuticals_industry }
+	}
+}
+
+ffpa_auto_pm_building_mendelejew_hydrogenation_plants_button = {
+	name = "building_mendelejew_hydrogenation_plants"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants } remove_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
+		else = { set_variable = ffpa_auto_pm_exclude_building_mendelejew_hydrogenation_plants }
+	}
+}
+
+ffpa_auto_pm_building_mendelejew_synthetic_rubber_factory_button = {
+	name = "building_mendelejew_synthetic_rubber_factory"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory } remove_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
+		else = { set_variable = ffpa_auto_pm_exclude_building_mendelejew_synthetic_rubber_factory }
+	}
+}
+
+# Machinery and aerospace
+ffpa_auto_pm_building_robotics_industry_button = {
+	name = "building_robotics_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_robotics_industry } remove_variable = ffpa_auto_pm_exclude_building_robotics_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_robotics_industry }
+	}
+}
+
+ffpa_auto_pm_building_aircraft_industry_button = {
+	name = "building_aircraft_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_aircraft_industry } remove_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_aircraft_industry }
+	}
+}
+
+# Electronics and hardware
+ffpa_auto_pm_building_processors_foundry_button = {
+	name = "building_processors_foundry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_processors_foundry } remove_variable = ffpa_auto_pm_exclude_building_processors_foundry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_processors_foundry }
+	}
+}
+
+ffpa_auto_pm_building_electronics_industry_button = {
+	name = "building_electronics_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_electronics_industry } remove_variable = ffpa_auto_pm_exclude_building_electronics_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_electronics_industry }
+	}
+}
+
+ffpa_auto_pm_building_computer_assembly_plant_button = {
+	name = "building_computer_assembly_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant } remove_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_computer_assembly_plant }
+	}
+}
+
+ffpa_auto_pm_building_consumer_electronics_industry_button = {
+	name = "building_consumer_electronics_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry } remove_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_consumer_electronics_industry }
+	}
+}
+
+# Digital industries
+ffpa_auto_pm_building_software_industry_button = {
+	name = "building_software_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_software_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_software_industry } remove_variable = ffpa_auto_pm_exclude_building_software_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_software_industry }
+	}
+}
+
+ffpa_auto_pm_building_datacenter_industry_button = {
+	name = "building_datacenter_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_datacenter_industry } remove_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_datacenter_industry }
+	}
+}
+
+ffpa_auto_pm_building_telecommunications_industry_button = {
+	name = "building_telecommunications_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_telecommunications_industry } remove_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_telecommunications_industry }
+	}
+}
+
+ffpa_auto_pm_building_interactive_media_industry_button = {
+	name = "building_interactive_media_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_interactive_media_industry } remove_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_interactive_media_industry }
+	}
+}
+
+# Business and logistics
+ffpa_auto_pm_building_office_button = {
+	name = "building_office"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_office } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_office } remove_variable = ffpa_auto_pm_exclude_building_office }
+		else = { set_variable = ffpa_auto_pm_exclude_building_office }
+	}
+}
+
+ffpa_auto_pm_building_ecommerce_logistics_button = {
+	name = "building_ecommerce_logistics"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics } remove_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
+		else = { set_variable = ffpa_auto_pm_exclude_building_ecommerce_logistics }
+	}
+}
+
+# Energy industries
+ffpa_auto_pm_building_hydroelectric_power_plant_button = {
+	name = "building_hydroelectric_power_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant } remove_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_hydroelectric_power_plant }
+	}
+}
+
+ffpa_auto_pm_building_geothermal_power_plant_button = {
+	name = "building_geothermal_power_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant } remove_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_geothermal_power_plant }
+	}
+}
+
+ffpa_auto_pm_building_renewable_energy_power_plant_button = {
+	name = "building_renewable_energy_power_plant"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant } remove_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
+		else = { set_variable = ffpa_auto_pm_exclude_building_renewable_energy_power_plant }
+	}
+}
+
+# Transport and urban facilities
+ffpa_auto_pm_building_airport_button = {
+	name = "building_airport"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_airport } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_airport } remove_variable = ffpa_auto_pm_exclude_building_airport }
+		else = { set_variable = ffpa_auto_pm_exclude_building_airport }
+	}
+}
+
+# Cultural industries
+ffpa_auto_pm_building_elgar_opera_button = {
+	name = "building_elgar_opera"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_elgar_opera } remove_variable = ffpa_auto_pm_exclude_building_elgar_opera }
+		else = { set_variable = ffpa_auto_pm_exclude_building_elgar_opera }
+	}
+}
+
+ffpa_auto_pm_building_instrument_workshops_button = {
+	name = "building_instrument_workshops"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_instrument_workshops } remove_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
+		else = { set_variable = ffpa_auto_pm_exclude_building_instrument_workshops }
+	}
+}
+
+ffpa_auto_pm_building_manzoni_publishing_industry_button = {
+	name = "building_manzoni_publishing_industry"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry } remove_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
+		else = { set_variable = ffpa_auto_pm_exclude_building_manzoni_publishing_industry }
+	}
+}
+
+# Research facilities
+ffpa_auto_pm_building_research_center_button = {
+	name = "building_research_center"
+	desc = "ffpa_auto_pm_building_selector_desc"
+	selected = { NOT = { has_variable = ffpa_auto_pm_exclude_building_research_center } }
+	effect = {
+		if = { limit = { has_variable = ffpa_auto_pm_exclude_building_research_center } remove_variable = ffpa_auto_pm_exclude_building_research_center }
+		else = { set_variable = ffpa_auto_pm_exclude_building_research_center }
+	}
+}
+

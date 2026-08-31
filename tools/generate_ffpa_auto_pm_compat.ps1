@@ -1,6 +1,8 @@
 param(
-    [string]$GameRoot = 'C:\SteamLibrary\steamapps\common\Victoria 3\game',
-    [string]$WorkshopRoot = 'C:\SteamLibrary\steamapps\workshop\content\529340',
+    [Parameter(Mandatory = $true)]
+    [string]$GameRoot,
+    [Parameter(Mandatory = $true)]
+    [string]$WorkshopRoot,
     [string]$TechResId = '3472248460',
     [string]$AutoPmId = '3353797125',
     [string]$AutoAutomationId = '3344726320',
@@ -413,10 +415,12 @@ function New-AutoPmTransition {
         PressureInputs = $reducedInputs
         ReducedOutputs = $reducedOutputs
         Gate = $Gate
+        ExclusionGate = if (-not $Automation -and $newBuildingCategories.Contains($Building)) { "ffpa_auto_pm_exclude_${Building}" } else { $null }
         Automation = $Automation
         Transport = if ($Automation) { $Transport } else { $false }
         Observation = if ($Automation) { 'ffpa_auto_pm_automation_observation_months' } else { 'ffpa_auto_pm_production_observation_months' }
         CheckProductivity = $CheckProductivity
+        RollbackEnabled = -not $Automation
         Legacy = $Legacy
     }
 }
@@ -521,6 +525,16 @@ $explosivesProductionTransitions = @($transitions | Where-Object { $_.Building -
 if (-not ($explosivesProductionTransitions | Where-Object Direction -eq 'up') -or -not ($explosivesProductionTransitions | Where-Object Direction -eq 'down')) {
     throw 'Explosives factory ordinary production chain is not covered in both directions'
 }
+$controlledNewProductionBuildings = @($transitions |
+    Where-Object { -not $_.Automation -and $_.ExclusionGate } |
+    Select-Object -ExpandProperty Building -Unique)
+$eligibleNewProductionBuildings = @($newBuildingCategories.Keys |
+    Where-Object { $productionBuildings.Contains($_) })
+$missingNewBuildingControls = @($eligibleNewProductionBuildings |
+    Where-Object { $_ -notin $controlledNewProductionBuildings })
+if ($missingNewBuildingControls.Count) {
+    throw "New Tech & Res buildings lack per-building production controls: $($missingNewBuildingControls -join ', ')"
+}
 
 # Clausewitz variable identifiers are kept deliberately short.  The descriptive
 # transition key is retained in the coverage report, while runtime flags use a
@@ -587,6 +601,7 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
             Add-Line $effects 2 'limit = {'
             Add-Line $effects 3 'owner = {'
             foreach ($gateVariable in ($transition.Gate -split '\+')) { Add-Line $effects 4 "has_variable = $gateVariable" }
+            if ($transition.ExclusionGate) { Add-Line $effects 4 "NOT = { has_variable = $($transition.ExclusionGate) }" }
             Add-Line $effects 3 '}'
             Add-Line $effects 3 'state = {'
             Add-Line $effects 4 "NOT = { has_variable = $pendingVar }"
@@ -652,6 +667,7 @@ foreach ($building in ($newBuildingCategories.Keys | Where-Object { $productionB
     Add-Line $effects 1 'if = {'
     Add-Line $effects 2 'limit = {'
     Add-Line $effects 3 "has_variable = $category"
+    Add-Line $effects 3 "NOT = { has_variable = ffpa_auto_pm_exclude_${building} }"
     Add-Line $effects 3 'OR = {'
     Add-Line $effects 4 'has_variable = zw_var_auto_pm_higher_frequency'
     Add-Line $effects 4 "month = $monthA"
@@ -993,14 +1009,14 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
         Add-Line $trials 6 "state = { change_variable = { name = $pendingMonthsVar add = 1 } }"
         Add-Line $trials 6 'if = {'
         Add-Line $trials 7 "limit = { state = { var:$pendingMonthsVar >= ffpa_auto_pm_candidate_months } }"
-        if ($transition.CheckProductivity) {
+        if ($transition.RollbackEnabled -and $transition.CheckProductivity) {
             Add-Line $trials 7 'ffpa_capture_auto_pm_productivity_band = {'
             Add-Line $trials 8 "BASELINE_VAR = $baselineVar"
             Add-Line $trials 7 '}'
         }
         Add-Line $trials 7 'state = {'
         Add-Line $trials 8 "set_variable = { name = $trialMonthsVar value = 0 }"
-        if ($transition.CheckProductivity) {
+        if ($transition.RollbackEnabled -and $transition.CheckProductivity) {
             Add-Line $trials 8 "set_variable = { name = $successVar value = 0 }"
             Add-Line $trials 8 "set_variable = { name = $failureVar value = 0 }"
         }
@@ -1042,7 +1058,7 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
         Add-Line $trials 6 "$clearEffect = yes"
         Add-Line $trials 6 "state = { set_variable = { name = $manualLockVar value = 1 months = ffpa_auto_pm_manual_lock_months } }"
         Add-Line $trials 5 '}'
-        if ($transition.Inputs.Count -gt 0) {
+        if ($transition.RollbackEnabled -and $transition.Inputs.Count -gt 0) {
             Add-Line $trials 5 'else_if = {'
             Add-Line $trials 6 'limit = {'
             Add-Line $trials 7 'state = { OR = {'
@@ -1056,7 +1072,7 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
             Add-Line $trials 6 "state = { set_variable = { name = $groupCooldownVar value = 1 months = ffpa_auto_pm_failure_cooldown_months } }"
             Add-Line $trials 5 '}'
         }
-        if ($transition.CheckProductivity) {
+        if ($transition.RollbackEnabled -and $transition.CheckProductivity) {
             # Old saves may contain live trials created before the counters were
             # initialized.  Preserve the active PM and captured baseline, then
             # give the repaired trial a fresh observation window.
@@ -1077,7 +1093,7 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
         }
         Add-Line $trials 5 'else_if = {'
         Add-Line $trials 6 "limit = { state = { var:$trialMonthsVar >= $($transition.Observation) } }"
-        if ($transition.CheckProductivity) {
+        if ($transition.RollbackEnabled -and $transition.CheckProductivity) {
             Add-Line $trials 6 'if = {'
             Add-Line $trials 7 'limit = {'
             Add-Line $trials 8 'AND = {'
@@ -1124,7 +1140,12 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
         }
         else {
             Add-Line $trials 6 "state = { remove_variable = ffpa_trial_$($transition.VarKey) }"
-            Add-Line $trials 6 ('debug_log = "FFPA_PM|SUCCESS_NO_PRODUCTIVITY|{0}|{1}|{2}"' -f $transition.VarKey, $building, $transition.Candidate)
+            if ($transition.Automation) {
+                Add-Line $trials 6 ('debug_log = "FFPA_PM|KEEP_NO_ROLLBACK|{0}|{1}|{2}|{3}|automation or transportation trial retained unconditionally"' -f $transition.VarKey, $building, $transition.Pmg, $transition.Direction.ToUpperInvariant())
+            }
+            else {
+                Add-Line $trials 6 ('debug_log = "FFPA_PM|SUCCESS_NO_PRODUCTIVITY|{0}|{1}|{2}"' -f $transition.VarKey, $building, $transition.Candidate)
+            }
             Add-Line $trials 6 "$clearEffect = yes"
             Add-AutoPmSuccessState -Builder $trials -Indent 6 -Transition $transition -WorkflowKey $workflowKey
         }
@@ -1168,6 +1189,7 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
             Add-Line $productivityTriggers 2 'AND = {'
             Add-Line $productivityTriggers 3 'owner = {'
             foreach ($gateVariable in ($transition.Gate -split '\+')) { Add-Line $productivityTriggers 4 "has_variable = $gateVariable" }
+            if ($transition.ExclusionGate) { Add-Line $productivityTriggers 4 "NOT = { has_variable = $($transition.ExclusionGate) }" }
             Add-Line $productivityTriggers 3 '}'
             Add-Line $productivityTriggers 3 'state = {'
             Add-Line $productivityTriggers 4 "NOT = { has_variable = ffpa_ap_${workflowKey}_pending }"
@@ -1293,7 +1315,9 @@ for ($bandIndex = 0; $bandIndex -lt $capturedProductivityBandCount; $bandIndex++
 }
 Add-Line $productivityTriggers 1 '}'
 Add-Line $productivityTriggers 0 '}'
-$economicTransitionCount = @($transitions | Where-Object CheckProductivity).Count
+$economicRollbackTransitionCount = @($transitions | Where-Object { $_.RollbackEnabled -and $_.CheckProductivity }).Count
+$emergencyRollbackTransitionCount = @($transitions | Where-Object { $_.RollbackEnabled -and $_.Inputs.Count -gt 0 }).Count
+$automationNoRollbackTransitionCount = @($transitions | Where-Object Automation).Count
 $trialText = $trials.ToString()
 $triggerText = $productivityTriggers.ToString()
 $counterRepairCount = [regex]::Matches($trialText, 'FFPA_PM\|COUNTER_REPAIR\|').Count
@@ -1301,13 +1325,19 @@ $successCounterZeroCount = [regex]::Matches($trialText, 'set_variable = \{ name 
 $failureCounterZeroCount = [regex]::Matches($trialText, 'set_variable = \{ name = ffpa_ap_[A-Za-z0-9_]+_failure_checks value = 0 \}').Count
 $successCounterOneCount = [regex]::Matches($trialText, 'set_variable = \{ name = ffpa_ap_[A-Za-z0-9_]+_success_checks value = 1 \}').Count
 $failureCounterOneCount = [regex]::Matches($trialText, 'set_variable = \{ name = ffpa_ap_[A-Za-z0-9_]+_failure_checks value = 1 \}').Count
+$regularRollbackCount = [regex]::Matches($trialText, 'FFPA_PM\|ROLLBACK\|').Count
+$emergencyRollbackCount = [regex]::Matches($trialText, 'FFPA_PM\|EMERGENCY_ROLLBACK\|').Count
+$noRollbackKeepCount = [regex]::Matches($trialText, 'FFPA_PM\|KEEP_NO_ROLLBACK\|').Count
 $capturedBandAssignmentCount = [regex]::Matches($trialText, 'set_variable = \{ name = \$BASELINE_VAR\$ value = [0-9]+ \}').Count
 $acceptanceBandBranchCount = [regex]::Matches($triggerText, 'state = \{ var:\$BASELINE_VAR\$ = [0-9]+ \}').Count
-if ($counterRepairCount -ne $economicTransitionCount) { throw "Expected $economicTransitionCount counter-repair branches, got $counterRepairCount" }
-if ($successCounterZeroCount -ne ($economicTransitionCount * 2)) { throw "Expected $($economicTransitionCount * 2) success-counter zero initializers, got $successCounterZeroCount" }
-if ($failureCounterZeroCount -ne ($economicTransitionCount * 2)) { throw "Expected $($economicTransitionCount * 2) failure-counter zero initializers, got $failureCounterZeroCount" }
-if ($successCounterOneCount -ne $economicTransitionCount) { throw "Expected $economicTransitionCount self-initializing success increments, got $successCounterOneCount" }
-if ($failureCounterOneCount -ne $economicTransitionCount) { throw "Expected $economicTransitionCount self-initializing failure increments, got $failureCounterOneCount" }
+if ($counterRepairCount -ne $economicRollbackTransitionCount) { throw "Expected $economicRollbackTransitionCount counter-repair branches, got $counterRepairCount" }
+if ($successCounterZeroCount -ne ($economicRollbackTransitionCount * 2)) { throw "Expected $($economicRollbackTransitionCount * 2) success-counter zero initializers, got $successCounterZeroCount" }
+if ($failureCounterZeroCount -ne ($economicRollbackTransitionCount * 2)) { throw "Expected $($economicRollbackTransitionCount * 2) failure-counter zero initializers, got $failureCounterZeroCount" }
+if ($successCounterOneCount -ne $economicRollbackTransitionCount) { throw "Expected $economicRollbackTransitionCount self-initializing success increments, got $successCounterOneCount" }
+if ($failureCounterOneCount -ne $economicRollbackTransitionCount) { throw "Expected $economicRollbackTransitionCount self-initializing failure increments, got $failureCounterOneCount" }
+if ($regularRollbackCount -ne $economicRollbackTransitionCount) { throw "Expected $economicRollbackTransitionCount ordinary-production rollback branches, got $regularRollbackCount" }
+if ($emergencyRollbackCount -ne $emergencyRollbackTransitionCount) { throw "Expected $emergencyRollbackTransitionCount ordinary-production emergency rollback branches, got $emergencyRollbackCount" }
+if ($noRollbackKeepCount -ne $automationNoRollbackTransitionCount) { throw "Expected $automationNoRollbackTransitionCount automation no-rollback keep branches, got $noRollbackKeepCount" }
 if ($capturedBandAssignmentCount -ne $capturedProductivityBandCount) { throw "Expected $capturedProductivityBandCount captured earnings bands, got $capturedBandAssignmentCount" }
 if ($acceptanceBandBranchCount -ne $capturedProductivityBandCount) { throw "Expected $capturedProductivityBandCount earnings acceptance bands, got $acceptanceBandBranchCount" }
 [System.IO.File]::WriteAllText($triggersPath, $productivityTriggers.ToString(), [System.Text.UTF8Encoding]::new($true))
@@ -1315,6 +1345,11 @@ if ($acceptanceBandBranchCount -ne $capturedProductivityBandCount) { throw "Expe
 $coverage = [System.Text.StringBuilder]::new()
 $coveredAutomationBuildings = @($transitions | Where-Object Automation | Select-Object -ExpandProperty Building -Unique)
 $coveredAutomationPmgs = @($transitions | Where-Object Automation | Select-Object -ExpandProperty Pmg -Unique)
+$newBuildingControlVariables = @($transitions |
+    Where-Object { -not $_.Automation -and $_.ExclusionGate } |
+    Select-Object -ExpandProperty ExclusionGate -Unique)
+$newBuildingsWithoutProductionControls = @($newBuildingCategories.Keys |
+    Where-Object { $_ -notin $eligibleNewProductionBuildings })
 $uncoveredAutomationBuildings = @($automationBuildings | Where-Object { $_ -notin $coveredAutomationBuildings } | Sort-Object)
 $uncoveredAutomationPmgs = @($activeAutomationPmgs | Where-Object { $_ -notin $coveredAutomationPmgs } | Sort-Object)
 [void]$coverage.AppendLine('# Generated Tech & Res automatic-production coverage')
@@ -1324,6 +1359,10 @@ $uncoveredAutomationPmgs = @($activeAutomationPmgs | Where-Object { $_ -notin $c
 [void]$coverage.AppendLine("- Upward transitions: $(@($transitions | Where-Object Direction -eq 'up').Count)")
 [void]$coverage.AppendLine("- Downward transitions: $(@($transitions | Where-Object Direction -eq 'down').Count)")
 [void]$coverage.AppendLine("- Production buildings: $($productionBuildings.Count)")
+[void]$coverage.AppendLine("- Ordinary-production economic rollback transitions: $economicRollbackTransitionCount")
+[void]$coverage.AppendLine("- Automation/transportation transitions without trial rollback: $automationNoRollbackTransitionCount/$(@($transitions | Where-Object Automation).Count)")
+[void]$coverage.AppendLine("- Per-building production selectors: $($newBuildingControlVariables.Count)/$($eligibleNewProductionBuildings.Count) eligible Tech & Res new buildings")
+[void]$coverage.AppendLine("- New buildings without an ordinary-production selector: $(if ($newBuildingsWithoutProductionControls.Count) { $newBuildingsWithoutProductionControls -join ', ' } else { 'none' })")
 [void]$coverage.AppendLine("- Automation buildings covered: $($coveredAutomationBuildings.Count)/$($automationBuildings.Count)")
 [void]$coverage.AppendLine("- Active automation PMGs covered: $($coveredAutomationPmgs.Count)/$($activeAutomationPmgs.Count)")
 [void]$coverage.AppendLine("- Upstream automation building/PM pairs classified as automation or transport: $($upstreamAutomationBuildingPmPairs.Count - $missingUpstreamAutomationPairs.Count)/$($upstreamAutomationBuildingPmPairs.Count)")
@@ -1334,11 +1373,13 @@ $uncoveredAutomationPmgs = @($activeAutomationPmgs | Where-Object { $_ -notin $c
 [void]$coverage.AppendLine('- Intentionally excluded upstream orphan: `pmg_data_optimization_heavy_industry_software` (no effective building attachment).')
 [void]$coverage.AppendLine('- Intentionally excluded upstream orphan: `pmg_train_automation_building_hydroponic` (its referenced attachment target does not exist).')
 [void]$coverage.AppendLine()
-[void]$coverage.AppendLine('| Building | PMG | Previous | Candidate | Direction | Kind | Gate |')
-[void]$coverage.AppendLine('|---|---|---|---|---|---|---|')
+[void]$coverage.AppendLine('| Building | PMG | Previous | Candidate | Direction | Kind | Trial rollback | Gate |')
+[void]$coverage.AppendLine('|---|---|---|---|---|---|---|---|')
 foreach ($transition in $transitions | Sort-Object Building,Pmg,Previous,Candidate) {
     $kind = if ($transition.Automation) { if ($transition.Transport) { 'transport' } else { 'automation' } } else { 'production' }
-    [void]$coverage.AppendLine("| $($transition.Building) | $($transition.Pmg) | $($transition.Previous) | $($transition.Candidate) | $($transition.Direction) | $kind | $($transition.Gate) |")
+    $rollback = if ($transition.RollbackEnabled) { 'enabled' } else { 'disabled' }
+    $gate = if ($transition.ExclusionGate) { "$($transition.Gate) + NOT $($transition.ExclusionGate)" } else { $transition.Gate }
+    [void]$coverage.AppendLine("| $($transition.Building) | $($transition.Pmg) | $($transition.Previous) | $($transition.Candidate) | $($transition.Direction) | $kind | $rollback | $gate |")
 }
 $coveragePath = Join-Path $OutputRoot 'TECHRES_AUTO_PM_COVERAGE.md'
 [System.IO.File]::WriteAllText($coveragePath, $coverage.ToString(), [System.Text.UTF8Encoding]::new($false))
