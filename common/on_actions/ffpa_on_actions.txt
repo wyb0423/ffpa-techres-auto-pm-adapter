@@ -1,0 +1,28 @@
+# Ensure the adapter journal on new campaigns.
+# Existing saves are repaired by the monthly country pulse below.
+on_game_started_after_lobby = {
+	on_actions = {
+		ffpa_initialize_adapter_journals
+	}
+}
+
+ffpa_initialize_adapter_journals = {
+	effect = {
+		every_country = {
+			ffpa_ensure_auto_pm_compat_journal = yes
+		}
+	}
+}
+
+# Keep the adapter journal available on existing saves.
+on_monthly_pulse_country = {
+	on_actions = {
+		ffpa_monthly_ensure_adapter_journals
+	}
+}
+
+ffpa_monthly_ensure_adapter_journals = {
+	effect = {
+		ffpa_ensure_auto_pm_compat_journal = yes
+	}
+}

@@ -1,0 +1,12 @@
+# Keep the adapter journal available on new campaigns and existing saves.
+# This must be a scripted effect: callers in ffpa_on_actions invoke it with
+# `ffpa_ensure_auto_pm_compat_journal = yes`.
+ffpa_ensure_auto_pm_compat_journal = {
+	if = {
+		limit = {
+			is_player = yes
+			NOT = { has_journal_entry = je_ffpa_auto_pm_compat }
+		}
+		add_journal_entry = { type = je_ffpa_auto_pm_compat }
+	}
+}

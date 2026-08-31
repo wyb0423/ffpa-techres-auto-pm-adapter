@@ -1,0 +1,97 @@
+﻿je_ffpa_auto_pm_compat = {
+	icon = "gfx/interface/icons/map_mode_icons/production.dds"
+	group = je_group_historical_content
+
+	scripted_button = ffpa_auto_pm_resources_button
+	scripted_button = ffpa_auto_pm_agriculture_water_button
+	scripted_button = ffpa_auto_pm_chemicals_materials_button
+	scripted_button = ffpa_auto_pm_machinery_aerospace_button
+	scripted_button = ffpa_auto_pm_electronics_hardware_button
+	scripted_button = ffpa_auto_pm_digital_button
+	scripted_button = ffpa_auto_pm_business_logistics_button
+	scripted_button = ffpa_auto_pm_energy_button
+	scripted_button = ffpa_auto_pm_transport_urban_button
+	scripted_button = ffpa_auto_pm_culture_button
+	scripted_button = ffpa_auto_pm_research_button
+
+	on_monthly_pulse = {
+		effect = {
+			debug_log = "FFPA_PM|ADAPTER_MONTHLY|Tech & Res adapter journal pulse"
+			# Mirror Auto-Apply PMs' one/three-building budget for Tech & Res-only
+			# building types, which have no upstream per-building scheduler.
+			if = {
+				limit = {
+					0 <= {
+						if = {
+							limit = { has_variable = zw_var_auto_pm_num_3 }
+							value = 3
+						}
+						else = { value = 1 }
+						save_temporary_value_as = ffpa_scope_auto_pm_num
+					}
+				}
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_pm_automation_basic }
+				debug_log = "FFPA_PM|AUTOMATION_BASIC|ON"
+			}
+			else = { debug_log = "FFPA_PM|AUTOMATION_BASIC|OFF" }
+			if = {
+				limit = { has_variable = zw_var_auto_pm_automation_electric }
+				debug_log = "FFPA_PM|AUTOMATION_ELECTRIC|ON"
+			}
+			else = { debug_log = "FFPA_PM|AUTOMATION_ELECTRIC|OFF" }
+			if = {
+				limit = { has_variable = zw_var_auto_pm_automation_oil }
+				debug_log = "FFPA_PM|AUTOMATION_OIL|ON"
+			}
+			else = { debug_log = "FFPA_PM|AUTOMATION_OIL|OFF" }
+			if = {
+				limit = { has_variable = zw_var_auto_pm_transportation }
+				debug_log = "FFPA_PM|TRANSPORTATION|ON"
+			}
+			else = { debug_log = "FFPA_PM|TRANSPORTATION|OFF" }
+			if = {
+				limit = { has_variable = zw_var_auto_pm_slower_automation }
+				debug_log = "FFPA_PM|AUTOMATION_FREQUENCY|TWICE_YEARLY"
+			}
+			else = { debug_log = "FFPA_PM|AUTOMATION_FREQUENCY|MONTHLY" }
+			if = {
+				limit = {
+					any_scope_state = { zw_trigger_aaap_state_workforce_low = yes }
+				}
+				debug_log = "FFPA_PM|AUTOMATION_WORKFORCE_GATE|PASS"
+			}
+			else = { debug_log = "FFPA_PM|AUTOMATION_WORKFORCE_GATE|FAIL" }
+			ffpa_update_auto_pm_trials = yes
+			ffpa_process_new_techres_buildings = yes
+			# The upstream automation journal only scans automation when labour is
+			# scarce.  A bidirectional manager must also revisit states with ample
+			# labour so an uneconomic automation method can be tested downward.
+			if = {
+				limit = {
+					has_variable = zw_var_auto_pm_automation_basic
+					OR = {
+						NOT = { has_variable = zw_var_auto_pm_slower_automation }
+						month = 0
+						month = 6
+					}
+				}
+				every_scope_state = { ffpa_process_state_techres_automation = yes }
+			}
+			if = {
+				limit = {
+					has_variable = zw_var_auto_pm_transportation
+					OR = {
+						NOT = { has_variable = zw_var_auto_pm_slower_automation }
+						month = 0
+						month = 6
+					}
+				}
+				every_scope_state = { ffpa_process_state_techres_transportation = yes }
+			}
+		}
+	}
+
+	weight = 99998
+}

@@ -1,0 +1,45 @@
+﻿ffpa_toggle_auto_pm_resources = {
+	if = { limit = { has_variable = ffpa_auto_pm_resources } remove_variable = ffpa_auto_pm_resources }
+	else = { set_variable = ffpa_auto_pm_resources }
+}
+ffpa_toggle_auto_pm_agriculture_water = {
+	if = { limit = { has_variable = ffpa_auto_pm_agriculture_water } remove_variable = ffpa_auto_pm_agriculture_water }
+	else = { set_variable = ffpa_auto_pm_agriculture_water }
+}
+ffpa_toggle_auto_pm_chemicals_materials = {
+	if = { limit = { has_variable = ffpa_auto_pm_chemicals_materials } remove_variable = ffpa_auto_pm_chemicals_materials }
+	else = { set_variable = ffpa_auto_pm_chemicals_materials }
+}
+ffpa_toggle_auto_pm_machinery_aerospace = {
+	if = { limit = { has_variable = ffpa_auto_pm_machinery_aerospace } remove_variable = ffpa_auto_pm_machinery_aerospace }
+	else = { set_variable = ffpa_auto_pm_machinery_aerospace }
+}
+ffpa_toggle_auto_pm_electronics_hardware = {
+	if = { limit = { has_variable = ffpa_auto_pm_electronics_hardware } remove_variable = ffpa_auto_pm_electronics_hardware }
+	else = { set_variable = ffpa_auto_pm_electronics_hardware }
+}
+ffpa_toggle_auto_pm_digital = {
+	if = { limit = { has_variable = ffpa_auto_pm_digital } remove_variable = ffpa_auto_pm_digital }
+	else = { set_variable = ffpa_auto_pm_digital }
+}
+ffpa_toggle_auto_pm_business_logistics = {
+	if = { limit = { has_variable = ffpa_auto_pm_business_logistics } remove_variable = ffpa_auto_pm_business_logistics }
+	else = { set_variable = ffpa_auto_pm_business_logistics }
+}
+ffpa_toggle_auto_pm_energy = {
+	if = { limit = { has_variable = ffpa_auto_pm_energy } remove_variable = ffpa_auto_pm_energy }
+	else = { set_variable = ffpa_auto_pm_energy }
+}
+ffpa_toggle_auto_pm_transport_urban = {
+	if = { limit = { has_variable = ffpa_auto_pm_transport_urban } remove_variable = ffpa_auto_pm_transport_urban }
+	else = { set_variable = ffpa_auto_pm_transport_urban }
+}
+ffpa_toggle_auto_pm_culture = {
+	if = { limit = { has_variable = ffpa_auto_pm_culture } remove_variable = ffpa_auto_pm_culture }
+	else = { set_variable = ffpa_auto_pm_culture }
+}
+ffpa_toggle_auto_pm_research = {
+	if = { limit = { has_variable = ffpa_auto_pm_research } remove_variable = ffpa_auto_pm_research }
+	else = { set_variable = ffpa_auto_pm_research }
+}
+

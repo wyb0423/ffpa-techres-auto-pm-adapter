@@ -1,0 +1,21 @@
+{
+  "name": "FFPA — Tech & Res Auto PM Adapter",
+  "id": "com.wyb.ffpa-techres-auto-pm-adapter",
+  "version": "1.0.0",
+  "supported_game_version": "1.13.*",
+  "short_description": "Bidirectional production, automation, transportation, and data-optimization management for Tech & Res and the Auto-Apply PM mods.",
+  "tags": [
+    "Gameplay",
+    "Economy",
+    "Utilities"
+  ],
+  "relationships": [
+    {
+      "rel_type": "dependency",
+      "id": "tech.res",
+      "display_name": "[1.13] Tech & Res",
+      "resource_type": "mod",
+      "version": "1.*"
+    }
+  ]
+}

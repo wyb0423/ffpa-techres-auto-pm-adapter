@@ -1,0 +1,17 @@
+﻿# Economic thresholds used by the Tech & Res production-method adapter.
+ffpa_auto_pm_upgrade_input_price = 0.20
+ffpa_auto_pm_hold_input_price = 0.35
+ffpa_auto_pm_emergency_input_price = 0.60
+ffpa_auto_pm_output_price_floor = -0.10
+ffpa_auto_pm_downgrade_input_price = 0.35
+ffpa_auto_pm_downgrade_output_ceiling = 0.20
+ffpa_auto_pm_low_cash_reserves = 0.25
+
+ffpa_auto_pm_candidate_months = 2
+ffpa_auto_pm_production_observation_months = 3
+ffpa_auto_pm_automation_observation_months = 6
+ffpa_auto_pm_success_cooldown_months = 6
+ffpa_auto_pm_failure_cooldown_months = 9
+ffpa_auto_pm_reversal_window_months = 24
+ffpa_auto_pm_oscillation_lock_months = 18
+ffpa_auto_pm_manual_lock_months = 12

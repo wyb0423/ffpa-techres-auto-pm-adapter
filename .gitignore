@@ -1,0 +1,32 @@
+# Operating-system and editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local runtime diagnostics and crash dumps
+logs/
+*.log
+*.dmp
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.old
+*.orig
+.tmp/
+tmp/
+
+# Local-only environment/parameter overrides
+.env
+.env.*
+*.local.ps1
+
+# Build and release artifacts
+build/
+dist/
+*.zip

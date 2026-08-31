@@ -1,0 +1,77 @@
+﻿ffpa_auto_pm_resources_button = {
+	name = "ffpa_auto_pm_resources_button"
+	desc = "ffpa_auto_pm_resources_button_desc"
+	selected = { has_variable = ffpa_auto_pm_resources }
+	effect = { ffpa_toggle_auto_pm_resources = yes }
+}
+
+ffpa_auto_pm_agriculture_water_button = {
+	name = "ffpa_auto_pm_agriculture_water_button"
+	desc = "ffpa_auto_pm_agriculture_water_button_desc"
+	selected = { has_variable = ffpa_auto_pm_agriculture_water }
+	effect = { ffpa_toggle_auto_pm_agriculture_water = yes }
+}
+
+ffpa_auto_pm_chemicals_materials_button = {
+	name = "ffpa_auto_pm_chemicals_materials_button"
+	desc = "ffpa_auto_pm_chemicals_materials_button_desc"
+	selected = { has_variable = ffpa_auto_pm_chemicals_materials }
+	effect = { ffpa_toggle_auto_pm_chemicals_materials = yes }
+}
+
+ffpa_auto_pm_machinery_aerospace_button = {
+	name = "ffpa_auto_pm_machinery_aerospace_button"
+	desc = "ffpa_auto_pm_machinery_aerospace_button_desc"
+	selected = { has_variable = ffpa_auto_pm_machinery_aerospace }
+	effect = { ffpa_toggle_auto_pm_machinery_aerospace = yes }
+}
+
+ffpa_auto_pm_electronics_hardware_button = {
+	name = "ffpa_auto_pm_electronics_hardware_button"
+	desc = "ffpa_auto_pm_electronics_hardware_button_desc"
+	selected = { has_variable = ffpa_auto_pm_electronics_hardware }
+	effect = { ffpa_toggle_auto_pm_electronics_hardware = yes }
+}
+
+ffpa_auto_pm_digital_button = {
+	name = "ffpa_auto_pm_digital_button"
+	desc = "ffpa_auto_pm_digital_button_desc"
+	selected = { has_variable = ffpa_auto_pm_digital }
+	effect = { ffpa_toggle_auto_pm_digital = yes }
+}
+
+ffpa_auto_pm_business_logistics_button = {
+	name = "ffpa_auto_pm_business_logistics_button"
+	desc = "ffpa_auto_pm_business_logistics_button_desc"
+	selected = { has_variable = ffpa_auto_pm_business_logistics }
+	effect = { ffpa_toggle_auto_pm_business_logistics = yes }
+}
+
+ffpa_auto_pm_energy_button = {
+	name = "ffpa_auto_pm_energy_button"
+	desc = "ffpa_auto_pm_energy_button_desc"
+	selected = { has_variable = ffpa_auto_pm_energy }
+	effect = { ffpa_toggle_auto_pm_energy = yes }
+}
+
+ffpa_auto_pm_transport_urban_button = {
+	name = "ffpa_auto_pm_transport_urban_button"
+	desc = "ffpa_auto_pm_transport_urban_button_desc"
+	selected = { has_variable = ffpa_auto_pm_transport_urban }
+	effect = { ffpa_toggle_auto_pm_transport_urban = yes }
+}
+
+ffpa_auto_pm_culture_button = {
+	name = "ffpa_auto_pm_culture_button"
+	desc = "ffpa_auto_pm_culture_button_desc"
+	selected = { has_variable = ffpa_auto_pm_culture }
+	effect = { ffpa_toggle_auto_pm_culture = yes }
+}
+
+ffpa_auto_pm_research_button = {
+	name = "ffpa_auto_pm_research_button"
+	desc = "ffpa_auto_pm_research_button_desc"
+	selected = { has_variable = ffpa_auto_pm_research }
+	effect = { ffpa_toggle_auto_pm_research = yes }
+}
+
