@@ -1,6 +1,6 @@
 # FFPA — Tech & Res Auto PM Adapter
 
-为 Tech & Res 与两个通用 Auto-Apply Mod 提供完整的双向生产方式适配。该 Mod 已从 `2050 Firefall — Personal Preferences Adapter` 独立迁出，不依赖原适配器、Firefall、Core Balance 或 Building Pruning。
+为 Tech & Res 与两个通用 Auto-Apply Mod 提供完整的双向生产方式适配。该 Mod 已从旧版 `2050 Firefall — Personal Preferences Adapter`（现 `FFPA — Firefall Flavor Pack`）独立迁出，不依赖风味合集、Firefall、Core Balance 或 Building Pruning。
 
 ## 必要前置与加载顺序
 
