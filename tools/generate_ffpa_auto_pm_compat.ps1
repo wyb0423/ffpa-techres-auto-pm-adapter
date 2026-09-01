@@ -421,6 +421,7 @@ function New-AutoPmTransition {
         Observation = if ($Automation) { 'ffpa_auto_pm_automation_observation_months' } else { 'ffpa_auto_pm_production_observation_months' }
         CheckProductivity = $CheckProductivity
         RollbackEnabled = -not $Automation
+        CandidateEnabled = -not ($Automation -and $Direction -eq 'down')
         Legacy = $Legacy
     }
 }
@@ -513,7 +514,7 @@ foreach ($transition in @($transitions | Where-Object Direction -eq 'down')) {
 }
 
 $coveredAutomationBuildingPmPairs = [System.Collections.Generic.HashSet[string]]::new()
-foreach ($transition in @($transitions | Where-Object Automation)) {
+foreach ($transition in @($transitions | Where-Object { $_.Automation -and $_.CandidateEnabled })) {
     [void]$coveredAutomationBuildingPmPairs.Add("$($transition.Building)|$($transition.Previous)")
     [void]$coveredAutomationBuildingPmPairs.Add("$($transition.Building)|$($transition.Candidate)")
 }
@@ -543,6 +544,11 @@ $transitionIndex = 0
 foreach ($transition in $transitions) {
     $transitionIndex++
     $transition | Add-Member -NotePropertyName VarKey -NotePropertyValue ('t{0:D4}' -f $transitionIndex)
+}
+$activeTransitions = @($transitions | Where-Object CandidateEnabled)
+$retiredAutomationDownTransitions = @($transitions | Where-Object { $_.Automation -and -not $_.CandidateEnabled })
+if (@($activeTransitions | Where-Object { $_.Automation -and $_.Direction -eq 'down' }).Count) {
+    throw 'Automation or transportation downward candidates remain enabled'
 }
 
 # Building scopes cannot store variables in Victoria 3 1.13.  Each state has at
@@ -583,10 +589,10 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
     $trialVar = "ffpa_ap_${workflowKey}_trial"
     foreach ($mode in @('production', 'automation')) {
         $modeTransitions = if ($mode -eq 'automation') {
-            @($transitions | Where-Object { $_.Building -eq $building -and $_.Automation })
+            @($activeTransitions | Where-Object { $_.Building -eq $building -and $_.Automation })
         }
         else {
-            @($transitions | Where-Object { $_.Building -eq $building -and -not $_.Automation })
+            @($activeTransitions | Where-Object { $_.Building -eq $building -and -not $_.Automation })
         }
         $modeTransitions = @($modeTransitions | Sort-Object @{ Expression = { if ($_.Direction -eq 'down') { 0 } else { 1 } } }, VarKey)
         if ($modeTransitions.Count -eq 0) { continue }
@@ -727,7 +733,7 @@ Add-Line $effects 1 'ordered_scope_building = {'
 Add-Line $effects 2 'limit = {'
 Add-Line $effects 3 'level >= 1'
 Add-Line $effects 3 'OR = {'
-foreach ($building in ($transitions | Where-Object { $_.Automation -and -not $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
+foreach ($building in ($activeTransitions | Where-Object { $_.Automation -and -not $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
     Add-Line $effects 4 "AND = { is_building_type = $building ffpa_can_${building}_automation_transition = yes }"
 }
 Add-Line $effects 3 '}'
@@ -736,7 +742,7 @@ Add-Line $effects 2 'order_by = { subtract = level }'
 Add-Line $effects 2 'min = 0'
 Add-Line $effects 2 'max = 1'
 Add-Line $effects 2 'check_range_bounds = no'
-foreach ($building in ($transitions | Where-Object { $_.Automation -and -not $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
+foreach ($building in ($activeTransitions | Where-Object { $_.Automation -and -not $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
     Add-Line $effects 2 "if = { limit = { is_building_type = $building } ffpa_try_${building}_automation_transition = yes }"
 }
 Add-Line $effects 1 '}'
@@ -748,7 +754,7 @@ Add-Line $effects 1 'ordered_scope_building = {'
 Add-Line $effects 2 'limit = {'
 Add-Line $effects 3 'level >= 1'
 Add-Line $effects 3 'OR = {'
-foreach ($building in ($transitions | Where-Object { $_.Automation -and $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
+foreach ($building in ($activeTransitions | Where-Object { $_.Automation -and $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
     Add-Line $effects 4 "AND = { is_building_type = $building ffpa_can_${building}_automation_transition = yes }"
 }
 Add-Line $effects 3 '}'
@@ -757,7 +763,7 @@ Add-Line $effects 2 'order_by = { subtract = level }'
 Add-Line $effects 2 'min = 0'
 Add-Line $effects 2 'max = 1'
 Add-Line $effects 2 'check_range_bounds = no'
-foreach ($building in ($transitions | Where-Object { $_.Automation -and $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
+foreach ($building in ($activeTransitions | Where-Object { $_.Automation -and $_.Transport } | Select-Object -ExpandProperty Building -Unique | Sort-Object)) {
     Add-Line $effects 2 "if = { limit = { is_building_type = $building } ffpa_try_${building}_automation_transition = yes }"
 }
 Add-Line $effects 1 '}'
@@ -783,7 +789,7 @@ Add-Line $effects 2 'limit = {'
 Add-Line $effects 3 'any_scope_building = { ffpa_auto_pm_upstream_automation_guard = yes }'
 Add-Line $effects 3 'owner = { NOT = { has_variable = ffpa_pm_automation_guard_logged } }'
 Add-Line $effects 2 '}'
-Add-Line $effects 2 'debug_log = "FFPA_PM|AUTOMATION_GUARD|upstream automation handler delegated bidirectionally managed instances"'
+Add-Line $effects 2 'debug_log = "FFPA_PM|AUTOMATION_GUARD|upstream automation handler delegated upgrade-only managed instances"'
 Add-Line $effects 2 'owner = { set_variable = { name = ffpa_pm_automation_guard_logged value = 1 months = 1 } }'
 Add-Line $effects 1 '}'
 Add-Line $effects 1 'ffpa_process_state_techres_automation = yes'
@@ -809,7 +815,7 @@ Add-Line $effects 2 'limit = {'
 Add-Line $effects 3 'any_scope_building = { ffpa_auto_pm_upstream_transport_guard = yes }'
 Add-Line $effects 3 'owner = { NOT = { has_variable = ffpa_pm_transport_guard_logged } }'
 Add-Line $effects 2 '}'
-Add-Line $effects 2 'debug_log = "FFPA_PM|TRANSPORT_GUARD|upstream transportation handler delegated bidirectionally managed instances"'
+Add-Line $effects 2 'debug_log = "FFPA_PM|TRANSPORT_GUARD|upstream transportation handler delegated upgrade-only managed instances"'
 Add-Line $effects 2 'owner = { set_variable = { name = ffpa_pm_transport_guard_logged value = 1 months = 1 } }'
 Add-Line $effects 1 '}'
 Add-Line $effects 1 'ffpa_process_state_techres_transportation = yes'
@@ -918,6 +924,7 @@ Add-Line $trials 0
 # state independent while avoiding parameter-heavy calls at every exit path.
 foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
     $workflowKey = $buildingWorkflowKeys[$building]
+    $retiredBuildingTransitions = @($retiredAutomationDownTransitions | Where-Object Building -eq $building)
     Add-Line $trials 0 "ffpa_clear_auto_pm_workflow_${workflowKey} = {"
     Add-Line $trials 1 'state = {'
     Add-Line $trials 2 "remove_variable = ffpa_ap_${workflowKey}_pending"
@@ -927,6 +934,10 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
     Add-Line $trials 2 "remove_variable = ffpa_ap_${workflowKey}_baseline"
     Add-Line $trials 2 "remove_variable = ffpa_ap_${workflowKey}_success_checks"
     Add-Line $trials 2 "remove_variable = ffpa_ap_${workflowKey}_failure_checks"
+    foreach ($transition in $retiredBuildingTransitions) {
+        Add-Line $trials 2 "remove_variable = ffpa_pending_$($transition.VarKey)"
+        Add-Line $trials 2 "remove_variable = ffpa_trial_$($transition.VarKey)"
+    }
     Add-Line $trials 1 '}'
     Add-Line $trials 0 '}'
     Add-Line $trials 0
@@ -939,12 +950,17 @@ Add-Line $trials 3 'level >= 1'
 Add-Line $trials 3 'OR = {'
 foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
     $workflowKey = $buildingWorkflowKeys[$building]
+    $retiredBuildingTransitions = @($retiredAutomationDownTransitions | Where-Object Building -eq $building)
     Add-Line $trials 4 'AND = {'
     Add-Line $trials 5 "is_building_type = $building"
     Add-Line $trials 5 'state = {'
     Add-Line $trials 6 'OR = {'
     Add-Line $trials 7 "has_variable = ffpa_ap_${workflowKey}_pending"
     Add-Line $trials 7 "has_variable = ffpa_ap_${workflowKey}_trial"
+    foreach ($transition in $retiredBuildingTransitions) {
+        Add-Line $trials 7 "has_variable = ffpa_pending_$($transition.VarKey)"
+        Add-Line $trials 7 "has_variable = ffpa_trial_$($transition.VarKey)"
+    }
     Add-Line $trials 6 '}'
     Add-Line $trials 5 '}'
     Add-Line $trials 4 '}'
@@ -952,7 +968,8 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
 Add-Line $trials 3 '}'
 Add-Line $trials 2 '}'
 foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
-    $buildingTransitions = @($transitions | Where-Object Building -eq $building)
+    $buildingTransitions = @($activeTransitions | Where-Object Building -eq $building)
+    $retiredBuildingTransitions = @($retiredAutomationDownTransitions | Where-Object Building -eq $building)
     $workflowKey = $buildingWorkflowKeys[$building]
     $pendingVar = "ffpa_ap_${workflowKey}_pending"
     $pendingMonthsVar = "ffpa_ap_${workflowKey}_pending_months"
@@ -966,6 +983,22 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
 
     Add-Line $trials 2 'if = {'
     Add-Line $trials 3 "limit = { is_building_type = $building }"
+    if ($retiredBuildingTransitions.Count) {
+        Add-Line $trials 3 'if = {'
+        Add-Line $trials 4 'limit = {'
+        Add-Line $trials 5 'state = {'
+        Add-Line $trials 6 'OR = {'
+        foreach ($transition in $retiredBuildingTransitions) {
+            Add-Line $trials 7 "has_variable = ffpa_pending_$($transition.VarKey)"
+            Add-Line $trials 7 "has_variable = ffpa_trial_$($transition.VarKey)"
+        }
+        Add-Line $trials 6 '}'
+        Add-Line $trials 5 '}'
+        Add-Line $trials 4 '}'
+        Add-Line $trials 4 ('debug_log = "FFPA_PM|RETIRED_AUTOMATION_DOWN_CANCEL|{0}|retired pending or live downward workflow cleared; current PM retained"' -f $building)
+        Add-Line $trials 4 "$clearEffect = yes"
+        Add-Line $trials 3 '}'
+    }
     Add-Line $trials 3 'if = {'
     Add-Line $trials 4 "limit = { state = { has_variable = $pendingVar } }"
     foreach ($transition in $buildingTransitions) {
@@ -1174,10 +1207,10 @@ foreach ($building in ($transitions.Building | Sort-Object -Unique)) {
     $workflowKey = $buildingWorkflowKeys[$building]
     foreach ($mode in @('production', 'automation')) {
         $modeTransitions = if ($mode -eq 'automation') {
-            @($transitions | Where-Object { $_.Building -eq $building -and $_.Automation })
+            @($activeTransitions | Where-Object { $_.Building -eq $building -and $_.Automation })
         }
         else {
-            @($transitions | Where-Object { $_.Building -eq $building -and -not $_.Automation })
+            @($activeTransitions | Where-Object { $_.Building -eq $building -and -not $_.Automation })
         }
         if ($modeTransitions.Count -eq 0) { continue }
 
@@ -1243,9 +1276,10 @@ foreach ($building in ($productionBuildings | Sort-Object)) {
     if (-not $autoPmEffects[$building]) { continue }
 
     $workflowKey = $buildingWorkflowKeys[$building]
-    $managedMethods = @($transitions |
+    $managedMethods = @($activeTransitions |
         Where-Object { $_.Building -eq $building -and -not $_.Automation } |
-        Select-Object -ExpandProperty Candidate -Unique)
+        ForEach-Object { $_.Previous; $_.Candidate } |
+        Sort-Object -Unique)
     if ($managedMethods.Count -eq 0) { continue }
 
     Add-Line $productivityTriggers 0 "ffpa_auto_pm_upstream_guard_${workflowKey} = {"
@@ -1273,7 +1307,7 @@ foreach ($guardMode in @(
     [pscustomobject]@{ Name = 'automation'; Transport = $false },
     [pscustomobject]@{ Name = 'transport'; Transport = $true }
 )) {
-    $modeTransitions = @($transitions | Where-Object {
+    $modeTransitions = @($activeTransitions | Where-Object {
         $_.Automation -and $_.Transport -eq $guardMode.Transport
     })
     Add-Line $productivityTriggers 0 "ffpa_auto_pm_upstream_$($guardMode.Name)_guard = {"
@@ -1282,7 +1316,8 @@ foreach ($guardMode in @(
         $workflowKey = $buildingWorkflowKeys[$building]
         $managedMethods = @($modeTransitions |
             Where-Object Building -eq $building |
-            Select-Object -ExpandProperty Candidate -Unique)
+            ForEach-Object { $_.Previous; $_.Candidate } |
+            Sort-Object -Unique)
         Add-Line $productivityTriggers 2 'AND = {'
         Add-Line $productivityTriggers 3 "is_building_type = $building"
         Add-Line $productivityTriggers 3 'OR = {'
@@ -1315,9 +1350,9 @@ for ($bandIndex = 0; $bandIndex -lt $capturedProductivityBandCount; $bandIndex++
 }
 Add-Line $productivityTriggers 1 '}'
 Add-Line $productivityTriggers 0 '}'
-$economicRollbackTransitionCount = @($transitions | Where-Object { $_.RollbackEnabled -and $_.CheckProductivity }).Count
-$emergencyRollbackTransitionCount = @($transitions | Where-Object { $_.RollbackEnabled -and $_.Inputs.Count -gt 0 }).Count
-$automationNoRollbackTransitionCount = @($transitions | Where-Object Automation).Count
+$economicRollbackTransitionCount = @($activeTransitions | Where-Object { $_.RollbackEnabled -and $_.CheckProductivity }).Count
+$emergencyRollbackTransitionCount = @($activeTransitions | Where-Object { $_.RollbackEnabled -and $_.Inputs.Count -gt 0 }).Count
+$automationNoRollbackTransitionCount = @($activeTransitions | Where-Object Automation).Count
 $trialText = $trials.ToString()
 $triggerText = $productivityTriggers.ToString()
 $counterRepairCount = [regex]::Matches($trialText, 'FFPA_PM\|COUNTER_REPAIR\|').Count
@@ -1338,14 +1373,22 @@ if ($failureCounterOneCount -ne $economicRollbackTransitionCount) { throw "Expec
 if ($regularRollbackCount -ne $economicRollbackTransitionCount) { throw "Expected $economicRollbackTransitionCount ordinary-production rollback branches, got $regularRollbackCount" }
 if ($emergencyRollbackCount -ne $emergencyRollbackTransitionCount) { throw "Expected $emergencyRollbackTransitionCount ordinary-production emergency rollback branches, got $emergencyRollbackCount" }
 if ($noRollbackKeepCount -ne $automationNoRollbackTransitionCount) { throw "Expected $automationNoRollbackTransitionCount automation no-rollback keep branches, got $noRollbackKeepCount" }
+foreach ($transition in $retiredAutomationDownTransitions) {
+    if ($effects.ToString().Contains("DOWN_CANDIDATE|$($transition.VarKey)|")) {
+        throw "Retired automation downward candidate remains generated: $($transition.VarKey)"
+    }
+    if ($trialText.Contains("TRIAL_START|DOWN|$($transition.VarKey)|") -or $trialText.Contains("KEEP_NO_ROLLBACK|$($transition.VarKey)|")) {
+        throw "Retired automation downward trial remains generated: $($transition.VarKey)"
+    }
+}
 if ($capturedBandAssignmentCount -ne $capturedProductivityBandCount) { throw "Expected $capturedProductivityBandCount captured earnings bands, got $capturedBandAssignmentCount" }
 if ($acceptanceBandBranchCount -ne $capturedProductivityBandCount) { throw "Expected $capturedProductivityBandCount earnings acceptance bands, got $acceptanceBandBranchCount" }
 [System.IO.File]::WriteAllText($triggersPath, $productivityTriggers.ToString(), [System.Text.UTF8Encoding]::new($true))
 
 $coverage = [System.Text.StringBuilder]::new()
-$coveredAutomationBuildings = @($transitions | Where-Object Automation | Select-Object -ExpandProperty Building -Unique)
-$coveredAutomationPmgs = @($transitions | Where-Object Automation | Select-Object -ExpandProperty Pmg -Unique)
-$newBuildingControlVariables = @($transitions |
+$coveredAutomationBuildings = @($activeTransitions | Where-Object Automation | Select-Object -ExpandProperty Building -Unique)
+$coveredAutomationPmgs = @($activeTransitions | Where-Object Automation | Select-Object -ExpandProperty Pmg -Unique)
+$newBuildingControlVariables = @($activeTransitions |
     Where-Object { -not $_.Automation -and $_.ExclusionGate } |
     Select-Object -ExpandProperty ExclusionGate -Unique)
 $newBuildingsWithoutProductionControls = @($newBuildingCategories.Keys |
@@ -1354,13 +1397,16 @@ $uncoveredAutomationBuildings = @($automationBuildings | Where-Object { $_ -noti
 $uncoveredAutomationPmgs = @($activeAutomationPmgs | Where-Object { $_ -notin $coveredAutomationPmgs } | Sort-Object)
 [void]$coverage.AppendLine('# Generated Tech & Res automatic-production coverage')
 [void]$coverage.AppendLine()
-[void]$coverage.AppendLine("- Generated transitions: $($transitions.Count)")
+[void]$coverage.AppendLine("- Generated active transitions: $($activeTransitions.Count)")
+[void]$coverage.AppendLine("- Stable transition ID slots: $($transitions.Count)")
 [void]$coverage.AppendLine("- Preserved legacy forward transitions: $(@($transitions | Where-Object Legacy).Count)")
-[void]$coverage.AppendLine("- Upward transitions: $(@($transitions | Where-Object Direction -eq 'up').Count)")
-[void]$coverage.AppendLine("- Downward transitions: $(@($transitions | Where-Object Direction -eq 'down').Count)")
+[void]$coverage.AppendLine("- Upward transitions: $(@($activeTransitions | Where-Object Direction -eq 'up').Count)")
+[void]$coverage.AppendLine("- Downward transitions: $(@($activeTransitions | Where-Object Direction -eq 'down').Count) (ordinary production only)")
+[void]$coverage.AppendLine("- Retired automation/transportation downward transition ID slots: $($retiredAutomationDownTransitions.Count)")
 [void]$coverage.AppendLine("- Production buildings: $($productionBuildings.Count)")
 [void]$coverage.AppendLine("- Ordinary-production economic rollback transitions: $economicRollbackTransitionCount")
-[void]$coverage.AppendLine("- Automation/transportation transitions without trial rollback: $automationNoRollbackTransitionCount/$(@($transitions | Where-Object Automation).Count)")
+[void]$coverage.AppendLine("- Active automation/transportation transitions without trial rollback: $automationNoRollbackTransitionCount/$(@($activeTransitions | Where-Object Automation).Count)")
+[void]$coverage.AppendLine('- Active automation/transportation downward transitions: 0')
 [void]$coverage.AppendLine("- Per-building production selectors: $($newBuildingControlVariables.Count)/$($eligibleNewProductionBuildings.Count) eligible Tech & Res new buildings")
 [void]$coverage.AppendLine("- New buildings without an ordinary-production selector: $(if ($newBuildingsWithoutProductionControls.Count) { $newBuildingsWithoutProductionControls -join ', ' } else { 'none' })")
 [void]$coverage.AppendLine("- Automation buildings covered: $($coveredAutomationBuildings.Count)/$($automationBuildings.Count)")
@@ -1375,7 +1421,7 @@ $uncoveredAutomationPmgs = @($activeAutomationPmgs | Where-Object { $_ -notin $c
 [void]$coverage.AppendLine()
 [void]$coverage.AppendLine('| Building | PMG | Previous | Candidate | Direction | Kind | Trial rollback | Gate |')
 [void]$coverage.AppendLine('|---|---|---|---|---|---|---|---|')
-foreach ($transition in $transitions | Sort-Object Building,Pmg,Previous,Candidate) {
+foreach ($transition in $activeTransitions | Sort-Object Building,Pmg,Previous,Candidate) {
     $kind = if ($transition.Automation) { if ($transition.Transport) { 'transport' } else { 'automation' } } else { 'production' }
     $rollback = if ($transition.RollbackEnabled) { 'enabled' } else { 'disabled' }
     $gate = if ($transition.ExclusionGate) { "$($transition.Gate) + NOT $($transition.ExclusionGate)" } else { $transition.Gate }
@@ -1384,7 +1430,7 @@ foreach ($transition in $transitions | Sort-Object Building,Pmg,Previous,Candida
 $coveragePath = Join-Path $OutputRoot 'TECHRES_AUTO_PM_COVERAGE.md'
 [System.IO.File]::WriteAllText($coveragePath, $coverage.ToString(), [System.Text.UTF8Encoding]::new($false))
 
-Write-Output "Generated $($transitions.Count) transitions"
+Write-Output "Generated $($activeTransitions.Count) active transitions ($($transitions.Count) stable ID slots)"
 Write-Output "Production buildings: $($productionBuildings.Count)"
 Write-Output "Automation buildings: $($automationBuildings.Count)"
 Write-Output "Active automation PMGs: $($activeAutomationPmgs.Count)"

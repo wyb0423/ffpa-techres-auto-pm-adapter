@@ -99,9 +99,9 @@
 			else = { debug_log = "FFPA_PM|AUTOMATION_WORKFORCE_GATE|FAIL" }
 			ffpa_update_auto_pm_trials = yes
 			ffpa_process_new_techres_buildings = yes
-			# The upstream automation journal only scans automation when labour is
-			# scarce.  A bidirectional manager must also revisit states with ample
-			# labour so an uneconomic automation method can be tested downward.
+			# This journal also reaches Tech & Res buildings outside the upstream
+			# state selector.  Each upward candidate still enforces the workforce
+			# shortage gate; no downward automation candidate is generated.
 			if = {
 				limit = {
 					has_variable = zw_var_auto_pm_automation_basic
